@@ -1,10 +1,8 @@
 #include "tour_generator.h"
+#include "stops.h"
 #include "tourcmd.h"
-#include "geodb.h"
+#include <vector>
 #include "geotools.h"
-#include <iostream>
-#include <sstream>
-#include <iomanip>
 #include "base_classes.h"
 #include <string>
 using namespace std;

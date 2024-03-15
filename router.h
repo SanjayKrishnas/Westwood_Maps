@@ -2,10 +2,10 @@
 #define ROUTER
 
 #include "base_classes.h"
-#include "HashMap.h"
-#include "GeoPoint.h"
+#include "geopoint.h"
 #include <unordered_map>
 #include <vector>
+#include <utility>
 
 class Router : public RouterBase
 {

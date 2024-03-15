@@ -1,10 +1,9 @@
 #include "router.h"
-#include "geodb.h"
-#include <set>
 #include <queue>
 #include <unordered_map>
 #include <vector>
-#include <algorithm>
+#include <utility>
+#include "geotools.h"
 using namespace std;
 
 Router::Router(const GeoDatabaseBase& geo_db)
@@ -19,7 +18,7 @@ Router::~Router()
 
 std::vector<GeoPoint> Router::route(const GeoPoint& pt1, const GeoPoint& pt2) const
 {
-	//dijkstra
+	//dijkstra priority queue N logN
 	std::unordered_map<std::string, double> distance; //geopoints to distances
 	unordered_map<string, GeoPoint> previousPoint;
 	unordered_map<string, bool> visited; //this will keep track of what Geopoints have been optimized

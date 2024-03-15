@@ -2,9 +2,7 @@
 #include "HashMap.h"
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <vector>
-#include "base_classes.h"
 #include "geotools.h"
 #include "geopoint.h"
 
@@ -26,6 +24,10 @@ GeoDatabase::~GeoDatabase()
 bool GeoDatabase::load(const std::string& map_data_file)
 {
 	std::ifstream infile(map_data_file);
+	if (!infile)
+	{
+		return false; //this means the load failed so return false
+	}
 
 	std::string street;
 	while (getline(infile, street)) //while you can still input new lines of text

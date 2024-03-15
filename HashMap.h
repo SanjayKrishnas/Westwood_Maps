@@ -5,7 +5,6 @@
 #include <vector>
 #include <utility>
 #include <list>
-#include <iostream>
 
 template <typename T>
 class HashMap
@@ -31,8 +30,10 @@ public:
 	// return a pointer to the value associated with that key. This pointer can be
 	// used to examine that value within the map.
 	const T* find(const std::string& key) const;
-	HashMap(const HashMap&) = delete;
-	HashMap& operator=(const HashMap&) = delete;
+
+	HashMap(const HashMap&) = delete; //delete copy constructor
+	HashMap& operator=(const HashMap&) = delete; //delete assignment operator
+
 	// If no association exists with the given key, return nullptr; otherwise,
 	// return a pointer to the value associated with that key. This pointer can be
 	// used to examine that value or modify it directly within the map.

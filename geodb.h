@@ -2,13 +2,10 @@
 #define GEODATABASE
 
 #include "base_classes.h"
-#include "geotools.h"
 #include "geopoint.h"
 #include "HashMap.h"
-#include <iostream>
-#include <fstream>
-#include <sstream>
 #include <vector>
+#include <string>
 
 class GeoDatabase : public GeoDatabaseBase
 {
