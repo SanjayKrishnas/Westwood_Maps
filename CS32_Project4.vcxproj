@@ -135,10 +135,13 @@
     <ClInclude Include="router.h" />
     <ClInclude Include="stops.h" />
     <ClInclude Include="tourcmd.h" />
+    <ClInclude Include="tour_generator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="geodb.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="router.cpp" />
+    <ClCompile Include="tour_generator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

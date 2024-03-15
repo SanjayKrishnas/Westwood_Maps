@@ -25,8 +25,6 @@ GeoDatabase::~GeoDatabase()
 
 bool GeoDatabase::load(const std::string& map_data_file)
 {
-	//TO DO make check if you fail file load LIKE Harry should return false
-
 	std::ifstream infile(map_data_file);
 
 	std::string street;
@@ -167,3 +165,4 @@ std::string GeoDatabase::get_street_name(const GeoPoint& pt1, const GeoPoint& pt
 	//if both fail then return empty string 
 	return "";
 }
+////////////////////////////////////////////////////////////////////////////////////////
